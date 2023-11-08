@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity"
+    android:id="@+id/frame_container">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"
+        app:layout_constraintStart_toStartOf="parent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp"
+        app:layout_constraintStart_toStartOf="parent" />
+    <ImageView
+        android:id="@+id/mini_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/mini_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="74.5dp"
+        android:text="Помощник логиста"
+        android:textColor="#2B2D35"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="180dp"
+        android:text="Добро пожаловать в БИА.Помощник логиста"
+        android:textColor="#2B2D35"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="248dp"
+        android:text="Введите свой номер для авторизации"
+        android:textColor="#3C4049"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="289dp"
+        android:background="@drawable/oval_figure"
+        android:hint="999) 000 - 00 - 00"
+        app:layout_constraintStart_toStartOf="@id/leftline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingStart="40dp"
+        android:paddingBottom="3dp"
+        android:textSize="14sp"
+        android:textColorHint="#B8C4DB"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:inputType="phone"
+        android:maxLength="14"
+        android:autofillHints="(999) 000 - 00 - 00"
+        android:visibility="visible"
+        />
+
+    <TextView
+        android:id="@+id/seven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="299dp"
+        android:text="+7 ("
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible"
+        />
+<ImageView
+    android:id="@+id/button_continue"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:src="@drawable/button_continue"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="16dp"
+    android:windowSoftInputMode="adjustResize"
+    android:visibility="visible"
+    />
+    <ImageView
+        android:id="@+id/button_continue_yes"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:src="@drawable/button_continue_yes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:windowSoftInputMode="adjustResize"
+        android:visibility="invisible"
+        />
+    <TextView
+        android:id="@+id/continue_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Продолжить"
+        app:layout_constraintStart_toStartOf="@id/button_continue"
+        app:layout_constraintEnd_toEndOf="@id/button_continue"
+        app:layout_constraintTop_toTopOf="@id/button_continue"
+        app:layout_constraintBottom_toBottomOf="@id/button_continue"
+        android:textColor="#B8C4DB"
+        android:textSize="14sp"
+        />
+    <TextView
+        android:id="@+id/continue_word_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Продолжить"
+        app:layout_constraintStart_toStartOf="@id/button_continue"
+        app:layout_constraintEnd_toEndOf="@id/button_continue"
+        app:layout_constraintTop_toTopOf="@id/button_continue"
+        app:layout_constraintBottom_toBottomOf="@id/button_continue"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        android:textSize="14sp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
