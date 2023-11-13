@@ -6,4 +6,16 @@
     <color name="button_continue_word_no">#B8C4DB</color>
     <color name="button_continue_yes">#2B2D35</color>
     <color name="button_continue_word_yes">#FFF</color>
+
+    <color name="day_not_month_work">#EAEEF4</color>
+    <color name="day_not_month_chill">#FBC1C5</color>
+    <color name="day_not_month_underwork">#FFCE70</color>
+
+    <color name="day_month_work">#EAEEF4</color>
+    <color name="day_month_chill">#FBC1C5</color>
+    <color name="day_month_weak">#C1DCF5</color>
+    <color name="day_month_underwork">#FFCE70</color>
+
+
+
 </resources>

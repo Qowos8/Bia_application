@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    tools:ignore="InvalidNavigation">
+    <fragment
+        android:id="@+id/taskFragment"
+        android:name="com.example.bia_application.TaskFragment"
+        >
+        <action
+            android:id="@+id/action_task_to_profile"
+            app:destination="@id/profile_fragment" />
+        <action
+            android:id="@+id/action_task_to_chart"
+            app:destination="@id/chart_fragment" />
+        <action
+            android:id="@+id/action_task_to_chat"
+            app:destination="@id/chat_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="com.example.bia_application.Profile_fragment" />
+
+    <fragment
+        android:id="@+id/chart_fragment"
+        android:name="com.example.bia_application.Chart_fragment" />
+    <fragment
+        android:id="@+id/chat_fragment"
+        android:name="com.example.bia_application.Chat_fragment" />
+    <fragment
+        android:id="@+id/intermediate_fragment"
+        android:name="com.example.bia_application.InterMediate_fragment"
+        >
+        <action
+            android:id="@+id/action_intermediate_to_task"
+            app:destination="@+id/taskFragment" />
+    </fragment>
+    <activity
+    android:id="@+id/splash"
+    android:name="com.example.bia_application.Splash"
+        />
+</navigation>

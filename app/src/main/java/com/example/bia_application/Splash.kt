@@ -12,13 +12,25 @@ class Splash: AppCompatActivity()  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.splash_bia)
 
+        val sharedPreferences = getPreferences(MODE_PRIVATE)
+        isTransitionDone = sharedPreferences.getBoolean("isTransitionDone", false)
+
         if (!isTransitionDone) {
-            isTransitionDone = true
             Handler().postDelayed({
                 val mainIntent = Intent(this, MainActivity::class.java)
                 startActivity(mainIntent)
                 finish()
             }, 2000)
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        val sharedPreferences = getPreferences(MODE_PRIVATE)
+        sharedPreferences.edit().putBoolean("isTransitionDone", isTransitionDone).apply()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
     }
 }

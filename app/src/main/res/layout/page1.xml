@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F4F6F9"
+    >
+
+
+    <ImageView
+        android:id="@+id/component1"
+        android:layout_width="match_parent"
+        android:layout_height="193dp"
+        android:src="@drawable/component_task"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/task_number1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Задание № 003"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/component1"
+        app:layout_constraintStart_toStartOf="@id/component1"
+        android:layout_margin="16dp"
+        />
+    <TextView
+        android:id="@+id/date_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11.08.2023 "
+        app:layout_constraintTop_toBottomOf="@id/task_number1"
+        app:layout_constraintStart_toStartOf="@id/component1"
+        android:layout_margin="15dp"
+        android:textSize="12sp"
+        android:textColor="#3C4049"
+        />
+
+    <ImageView
+        android:id="@+id/dot"
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="2dp"
+        android:src="@drawable/dot"
+        app:layout_constraintStart_toEndOf="@id/date_task"
+        app:layout_constraintTop_toBottomOf="@id/task_number1" />
+
+    <TextView
+        android:id="@+id/time_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:00 "
+        app:layout_constraintTop_toTopOf="@id/date_task"
+        app:layout_constraintStart_toEndOf="@id/dot"
+        android:layout_marginStart="4dp"
+        android:textSize="12sp"
+        android:textColor="#3C4049"
+        />
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30 000,00 ₽"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/component1"
+        app:layout_constraintEnd_toEndOf="@id/component1"
+        android:layout_margin="16dp"
+        android:textColor="#2B2D35"
+        />
+    <ImageView
+        android:id="@+id/oval_inside"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:src="@drawable/component_task_in_task"
+        app:layout_constraintStart_toStartOf="@id/component1"
+        app:layout_constraintTop_toBottomOf="@+id/date_task"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        />
+    <ImageView
+        android:id="@+id/oval"
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:src="@drawable/oval_new"
+        app:layout_constraintTop_toTopOf="@id/date_task"
+        app:layout_constraintEnd_toEndOf="@id/price"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Новое"
+        android:textColor="#59C617"
+        app:layout_constraintStart_toStartOf="@id/oval"
+        app:layout_constraintEnd_toEndOf="@id/oval"
+        app:layout_constraintTop_toTopOf="@id/oval"
+        app:layout_constraintBottom_toBottomOf="@id/oval"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/num2"
+        app:layout_constraintStart_toStartOf="@id/oval_inside"
+        app:layout_constraintTop_toTopOf="@id/oval_inside"
+        android:layout_marginStart="-24dp"
+        android:layout_marginTop="8dp"
+        />
+    <TextView
+        android:id="@+id/end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Магистральная улица, 52"
+        android:textSize="14sp"
+        android:textColor="#2B2D35"
+        app:layout_constraintStart_toStartOf="@id/oval_inside"
+        app:layout_constraintTop_toBottomOf="@+id/date_task_in"
+
+        />
+    <TextView
+        android:id="@+id/date_task_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13.08.2023 "
+        app:layout_constraintTop_toBottomOf="@id/end"
+        app:layout_constraintStart_toStartOf="@id/end"
+        android:textSize="12sp"
+        android:textColor="#6A7B94"
+        />
+    <ImageView
+        android:id="@+id/dot_grey_2"
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="2dp"
+        android:src="@drawable/dot_grey"
+        app:layout_constraintStart_toEndOf="@id/date_task_out"
+        app:layout_constraintTop_toTopOf="@id/date_task_out" />
+
+    <TextView
+        android:id="@+id/time_task_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13:00 "
+        app:layout_constraintTop_toTopOf="@id/date_task_out"
+        app:layout_constraintStart_toEndOf="@id/dot_grey_2"
+        android:layout_marginStart="4dp"
+        android:textSize="12sp"
+        android:textColor="#6A7B94"
+        />
+    <TextView
+        android:id="@+id/begin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Машиностроительная улица, 91"
+        android:textSize="14sp"
+        android:textColor="#2B2D35"
+        app:layout_constraintStart_toStartOf="@id/oval_inside"
+        app:layout_constraintTop_toTopOf="@id/oval_inside"
+        android:layout_marginTop="8dp"
+
+        />
+    <TextView
+        android:id="@+id/date_task_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12.08.2023 "
+        app:layout_constraintTop_toBottomOf="@id/begin"
+        app:layout_constraintStart_toStartOf="@id/begin"
+        android:textSize="12sp"
+        android:textColor="#6A7B94"
+        />
+    <ImageView
+        android:id="@+id/dot_grey"
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="2dp"
+        android:src="@drawable/dot_grey"
+        app:layout_constraintStart_toEndOf="@id/date_task_in"
+        app:layout_constraintTop_toTopOf="@id/date_task_in" />
+
+    <TextView
+        android:id="@+id/time_task_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:00 "
+        app:layout_constraintTop_toTopOf="@id/date_task_in"
+        app:layout_constraintStart_toEndOf="@id/dot_grey"
+        android:layout_marginStart="4dp"
+        android:textSize="12sp"
+        android:textColor="#6A7B94"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
